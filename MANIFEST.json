@@ -1,0 +1,47 @@
+{
+  "dataset": "Most Complained-About Vehicles: NHTSA Owner Complaints by Make, Model and Model Year, 2010-2025 (Q3 2026 Edition)",
+  "version": "2026-Q3, revision 2 (27 October 2026)",
+  "input": {
+    "file": "FLAT_CMPL.txt (NHTSA consumer complaint flat file)",
+    "source": "https://www.nhtsa.gov/nhtsa-datasets-and-apis",
+    "copy_dated": "2026-08-25",
+    "bytes": 1593124033,
+    "sha256": "0f9a7248ad30dd361aad0fe2758c106b748c4375085ee00d686ce185e8f7d7f9",
+    "rows_read": 2238354
+  },
+  "rules": {
+    "product_type": "V (vehicles)",
+    "model_years": "2010-2025",
+    "dedupe": "complaint number once per make, model and model year; once per component",
+    "floor": 10,
+    "model_names": "as NHTSA records them, no merging",
+    "components": "all",
+    "unknown_or_other": "kept in the CSV; left out only of the report's 'named most' pick and component chart"
+  },
+  "script": {
+    "file": "build_dataset.py",
+    "sha256": "ffc8766e449c3c58f6abf28868dba727eb24d32a5d3f5158055b05891bf4e12e",
+    "run": "python3 build_dataset.py FLAT_CMPL.txt"
+  },
+  "outputs": {
+    "nhtsa-complaints-by-model-2010-2025.csv": {
+      "bytes": 4576119,
+      "sha256": "bd6a35c7fa1dfce2be266d27b40ebf71703021167fa90d5414d0c6386d28b309"
+    },
+    "most-complained-2026-q3.json": {
+      "bytes": 22299,
+      "sha256": "ad096e00443081ed9bd1dc343767181d53185ba08a7fa628ce99a4ede6772c5a"
+    },
+    "most-complained-cars-2026-q3.pdf": {
+      "bytes": 1109835,
+      "sha256": "96417354e939a447131a1cf5792dd355a9f01b0b61f31c6354eeb09066a947af"
+    }
+  },
+  "checks": {
+    "csv_rows": 90254,
+    "groups": 4087,
+    "complaints": 625987,
+    "component_labels": 678,
+    "script_output_matches_csv": "byte-identical"
+  }
+}

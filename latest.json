@@ -1,0 +1,17 @@
+{
+ "edition": "2026-Q3-r2",
+ "data_date": "2026-08-25",
+ "published": "2026-10-27",
+ "doi_version": "10.5281/zenodo.23685716",
+ "doi_concept": "10.5281/zenodo.23662819",
+ "report_url": "https://oilandmiles.com/reports/most-complained-cars",
+ "license": "CC-BY-4.0",
+ "files": [
+  "nhtsa-complaints-by-model-2010-2025.csv",
+  "most-complained-2026-q3.json",
+  "build_dataset.py",
+  "MANIFEST.json",
+  "CHANGELOG.md",
+  "quickstart.ipynb"
+ ]
+}

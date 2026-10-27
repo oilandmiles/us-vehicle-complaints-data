@@ -7,6 +7,18 @@ Owner complaints filed with the US National Highway Traffic Safety Administratio
 
 This repository is a mirror. The permanent, citable copy is the Zenodo record [10.5281/zenodo.23685716](https://doi.org/10.5281/zenodo.23685716) (revision 2; all versions: [10.5281/zenodo.23662819](https://doi.org/10.5281/zenodo.23662819)). The full write-up, with charts and a per-vehicle lookup, is the [most complained-about cars report](https://oilandmiles.com/reports/most-complained-cars) on [Oil & Miles](https://oilandmiles.com).
 
+## Key findings
+
+From the [most complained-about cars report](https://oilandmiles.com/reports/most-complained-cars), Q3 2026 edition (NHTSA file dated 2026-08-25, model years 2010-2025):
+
+1. The 2010 Ford Fusion has the most complaints of any vehicle: 5,126, with steering named most (1,640 of them).
+2. Ford holds 17 of the 25 most complained-about vehicles, and 45 of the top 100.
+3. Ford accounts for 20.8% of all 625,987 complaints in the file; Chevrolet is next at 9.3%.
+4. Power train is the component named most in 9 of the top 25 vehicles; steering in 6.
+5. The only vehicle from model year 2023 or newer in the top 100 is the 2023 Tesla Model Y, with 1,134 complaints.
+
+New to the data? [`quickstart.ipynb`](quickstart.ipynb) loads the CSV, lists the top 10 vehicles and charts the components for one model.
+
 ## Files
 
 | File | Contents |
@@ -16,6 +28,8 @@ This repository is a mirror. The permanent, citable copy is the Zenodo record [1
 | [`build_dataset.py`](build_dataset.py) | Rebuilds the CSV byte for byte from NHTSA's flat file (Python 3, standard library) |
 | [`MANIFEST.json`](MANIFEST.json) | Input file date and sha256, rules, output checksums |
 | [`CHANGELOG.md`](CHANGELOG.md) | What changed between revisions |
+| [`latest.json`](latest.json) | The current edition, its dates, both DOIs and the file list, for scripts that check for a new edition |
+| [`quickstart.ipynb`](quickstart.ipynb) | Load the CSV, list the top 10 vehicles, chart one vehicle's components (pandas, matplotlib) |
 
 ## CSV columns
 

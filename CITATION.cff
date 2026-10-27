@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it using the Zenodo DOI below."
+type: dataset
+title: "Most Complained-About Vehicles: NHTSA Owner Complaints by Make, Model and Model Year, 2010-2025 (Q3 2026 Edition)"
+version: 2026-Q3
+date-released: 2026-09-14
+doi: 10.5281/zenodo.23662820
+license: CC-BY-4.0
+url: "https://oilandmiles.com/reports/most-complained-cars"
+repository-code: "https://github.com/oilandmiles/us-vehicle-complaints-data"
+authors:
+  - family-names: Taher
+    given-names: Iqbal
+    orcid: "https://orcid.org/0009-0000-5745-9451"
+    affiliation: "Oil & Miles"
+keywords:
+  - NHTSA
+  - vehicle complaints
+  - car reliability
+  - automotive safety
+  - open data
